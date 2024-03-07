@@ -27,4 +27,4 @@ RUN pip install --no-cache-dir --upgrade pip==24.0 \
 EXPOSE 8000
 
 ENTRYPOINT [ "poetry", "run" ]
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0" , "--port", "$PORT"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port $PORT]
